@@ -11,13 +11,18 @@ body::after{content:"";position:absolute;inset:0;background-image:linear-gradien
 .c{position:relative;z-index:1;height:100%;display:flex;flex-direction:column}
 .pill{display:inline-flex;align-items:center;gap:10px;font-size:22px;color:#a1a1aa;border:1px solid #27272a;background:#111113;border-radius:999px;padding:8px 20px 8px 16px;align-self:flex-start}
 .pill i{width:12px;height:12px;border-radius:50%;background:#22c55e}
-h1{font-size:92px;font-weight:600;letter-spacing:-.035em;line-height:1.02;margin-top:48px}
+h1{font-size:80px;font-weight:600;letter-spacing:-.035em;line-height:1.02;margin-top:48px}
 h2{font-size:64px;font-weight:600;letter-spacing:-.03em;line-height:1.05;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;color:transparent}
 .stack{margin-top:auto;display:flex;justify-content:space-between;align-items:end;font-family:"Geist Mono",monospace;font-size:24px;color:#a1a1aa}
 .stack b{color:#fafafa;font-weight:500}
-</style></head><body><div class="c">
+.photo{position:absolute;top:0;right:0;width:420px;height:630px;z-index:1;
+ background:url(photo.jpg) center/cover;
+ -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+.c{max-width:760px}
+</style></head><body><div class="photo"></div><div class="c">
 <div class="pill"><i></i>Remote · East Java, Indonesia (GMT+7)</div>
 <h1>Chalid Ade Rahman</h1>
 <h2>Senior Frontend Engineer</h2>
-<div class="stack"><span>React · Next.js · TypeScript · 8+ yrs</span><b>chalidade.github.io</b></div>
+<div style="margin-top:28px;font-family:'Geist Mono',monospace;font-size:24px;color:#fafafa">chalidade.github.io</div>
+<div class="stack"><span>React · Next.js · TypeScript · 8+ yrs</span></div>
 </div></body></html>
