@@ -1,9 +1,8 @@
 # chalidade.github.io
 
-Portfolio + jurnal belajar, tayang di https://chalidade.github.io/.
+Portfolio Chalid Ade Rahman, tayang di https://chalidade.github.io/.
 
-Satu file HTML statis tanpa build step. Untuk memperbarui isi, edit array
-`SKILLS`, `LOG`, dan `PROJECTS` di bagian `<script>` paling bawah
-`index.html`, lalu commit dan push — GitHub Pages memperbaruinya dalam ±1 menit.
+Satu file HTML statis (`index.html`) tanpa build step — isinya diambil dari CV.
+Edit langsung markup-nya, commit, push; GitHub Pages memperbaruinya dalam ±1 menit.
 
 Situs-situs weeknoo tetap di https://chalidade.github.io/weeknoo/ (repo terpisah).
