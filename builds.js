@@ -26,4 +26,14 @@ window.BUILDS = [
     status: "live",
     icon: "W",
   },
+  {
+    name: "tools",
+    description:
+      "Privacy-first file converters that run entirely in the browser — Word, PDF, PowerPoint and images, with nothing uploaded to a server.",
+    repo: "https://github.com/chalidade/tools",
+    url: "https://chalidade.github.io/tools/",
+    tags: ["React", "TypeScript", "pdf.js", "jsPDF", "Client-side"],
+    status: "live",
+    icon: "T",
+  },
 ]
