@@ -8,6 +8,11 @@ HTML statis tanpa build step — isinya diambil dari CV (v3).
 - `builds.js` — daftar repo / tools di section **Builds**. Tambah satu objek
   per repo (`name`, `description`, `repo`, `url`, `tags`, `status`, `icon`);
   formatnya dijelaskan di kepala file.
+- `log/index.html` — halaman **Devlog** (https://chalidade.github.io/log/). Isinya
+  dibaca langsung dari repo [chalidade/devlog](https://github.com/chalidade/devlog)
+  saat halaman dibuka: `entries/**/YYYY-MM-DD-judul.md` jadi linimasa (terbaru di
+  atas), `notes/**/*.md` jadi kartu catatan. Cukup push file `.md` baru ke devlog —
+  repo ini tidak perlu diubah.
 
 Edit, commit, push — GitHub Pages memperbaruinya dalam ±1 menit.
 Situs-situs weeknoo tetap di https://chalidade.github.io/weeknoo/ (repo terpisah).
