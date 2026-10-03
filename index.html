@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chalid Ade Rahman — Software Developer</title>
-  <meta name="description" content="Senior front-end developer with 5+ years of remote experience building scalable web apps in React, Next.js and TypeScript for clients in EdTech, logistics and non-profit.">
-  <meta property="og:title" content="Chalid Ade Rahman — Software Developer">
-  <meta property="og:description" content="React · Next.js · TypeScript · API integration. 5+ years remote, East Java, Indonesia.">
+  <title>Chalid Ade Rahman — Senior Frontend Engineer</title>
+  <meta name="description" content="Senior Frontend Engineer with 8+ years building production web apps in React, Next.js and TypeScript for global teams across EdTech, logistics and fintech.">
+  <meta property="og:title" content="Chalid Ade Rahman — Senior Frontend Engineer">
+  <meta property="og:description" content="React · Next.js · TypeScript · AI-assisted development. 8+ years, remote from East Java, Indonesia (GMT+7).">
   <meta property="og:url" content="https://chalidade.github.io/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563eb'/><text x='16' y='22' font-family='Arial' font-weight='700' font-size='16' fill='white' text-anchor='middle'>CR</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,6 +138,48 @@
     .metrics div b { display: block; font-size: 22px; font-weight: 600; letter-spacing: -.02em; }
     .metrics div span { font-size: 12px; color: var(--muted); }
 
+    .project .stack { font-size: 12px; color: var(--subtle); margin-top: 14px; }
+    .project a.ext { position: relative; z-index: 1; color: var(--accent); font-size: 14px; font-weight: 500; }
+    .project a.ext:hover { text-decoration: underline; }
+
+    /* builds — rendered from builds.js */
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 40px; }
+    .section-head h2 { margin-bottom: 0; }
+    .section-head p { color: var(--muted); font-size: 15px; max-width: 40ch; }
+    .builds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .build {
+      display: flex; flex-direction: column; padding: 20px; border: 1px solid var(--border);
+      border-radius: 16px; background: var(--card); transition: border-color .2s, transform .2s;
+    }
+    .build:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .build-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .build-icon {
+      display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px;
+      background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 15px;
+    }
+    .badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+    .badge.live { color: #16a34a; border-color: color-mix(in srgb, #16a34a 40%, var(--border)); }
+    .badge.wip { color: #d97706; border-color: color-mix(in srgb, #d97706 40%, var(--border)); }
+    .build h3 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+    .build p { font-size: 14px; color: var(--muted); margin-top: 4px; flex: 1; }
+    .build .chips { margin-top: 14px; }
+    .build-links { display: flex; gap: 16px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 13px; font-weight: 500; }
+    .build-links a { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+    .build-links a:hover { color: var(--fg); }
+    .build-links svg { width: 14px; height: 14px; }
+    .build.placeholder {
+      border-style: dashed; background: transparent; align-items: center; justify-content: center;
+      text-align: center; color: var(--subtle); font-size: 14px; min-height: 180px;
+    }
+    .build.placeholder:hover { transform: none; border-color: var(--border); }
+
+    /* community */
+    .talks li { display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .talks li:last-child { border-bottom: 0; }
+    .talks .role { font-size: 12px; color: var(--accent); padding-top: 3px; }
+    .talks b { font-weight: 500; display: block; }
+    .talks span { font-size: 14px; color: var(--muted); }
+
     /* skills */
     .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .skill-group { padding: 20px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
@@ -176,6 +218,9 @@
     }
     @keyframes up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
+    @media (max-width: 900px) and (min-width: 721px) {
+      .builds { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 720px) {
       .nav-links a { display: none; }
       .hero { padding: 64px 0 48px; }
@@ -184,7 +229,9 @@
       .stat:nth-child(n+3) { border-top: 1px solid var(--border); }
       section { padding: 56px 0; }
       .job { grid-template-columns: 1fr; gap: 6px; }
-      .freelance, .projects, .skills, .two-col { grid-template-columns: 1fr; }
+      .freelance, .projects, .skills, .two-col, .builds { grid-template-columns: 1fr; }
+      .section-head { flex-direction: column; align-items: start; }
+      .talks li { grid-template-columns: 1fr; gap: 2px; }
       .project.wide { grid-column: auto; }
       .two-col { gap: 40px; }
     }
@@ -197,6 +244,7 @@
       <div class="nav-links">
         <a href="#experience">Experience</a>
         <a href="#work">Work</a>
+        <a href="#builds">Builds</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
@@ -209,12 +257,13 @@
   <main>
     <div class="wrap hero">
       <div class="status"><i></i> Remote · East Java, Indonesia (GMT+7)</div>
-      <h1>Chalid Ade Rahman.<br><span class="grad">I build web apps that scale.</span></h1>
+      <h1>Chalid Ade Rahman.<br><span class="grad">Senior Frontend Engineer.</span></h1>
       <p class="lead">
-        Senior front-end developer with <b>5+ years of remote experience</b> shipping
-        high-performance web applications for global teams in <b>EdTech</b>, <b>logistics</b>
-        and <b>non-profit</b>. I work mostly in React, Next.js and TypeScript, and I'm
-        comfortable across the stack with Laravel, Lumen and Node.js.
+        <b>8+ years</b> building production web apps for global teams across <b>EdTech</b>,
+        <b>logistics</b> and <b>fintech</b>. I architect and ship React / Next.js applications
+        that scale — TypeScript-first, with full-stack range across Laravel and Node.js —
+        and <b>AI-assisted (agentic) development</b> is a core part of how I work every day.
+        My deep-work hours overlap European afternoons and US Pacific mornings.
       </p>
       <div class="cta">
         <a class="btn primary" href="mailto:chalidade@gmail.com">
@@ -231,8 +280,8 @@
         </a>
       </div>
       <div class="stats">
-        <div class="stat"><b>5+ yrs</b><span>remote, with teams in Australia &amp; Hong Kong</span></div>
-        <div class="stat"><b>5,000+</b><span>global learners on an app I built</span></div>
+        <div class="stat"><b>8+ yrs</b><span>shipping production web apps</span></div>
+        <div class="stat"><b>5,000+</b><span>global learners on an app I led</span></div>
         <div class="stat"><b>−35%</b><span>page load time after optimisation</span></div>
         <div class="stat"><b>1,700+</b><span>contributions in the past year</span></div>
       </div>
@@ -255,24 +304,23 @@
               <div>
                 <div class="role-sub">IT Project Manager (Hands-on Technical Lead) · Nov 2025 — Present</div>
                 <ul class="points">
-                  <li>Promoted after 5 years to lead technical delivery while staying the <b>primary front-end engineer</b>.</li>
+                  <li>Promoted after 5 years to lead technical delivery while staying the <b>primary frontend engineer</b>.</li>
                   <li>Ship production React / Next.js / TypeScript code daily, with <b>AI-assisted (agentic) development</b> as a core part of the workflow.</li>
-                  <li>Own end-to-end delivery: scope, timeline, stakeholders and the code itself. <b>1,700+ contributions</b> in the past year.</li>
+                  <li>Own end-to-end delivery — scope, timeline, stakeholders and the code itself. <b>1,700+ contributions</b> in the past year.</li>
                 </ul>
               </div>
               <div>
                 <div class="role-sub">Software Developer · Sep 2020 — Nov 2025</div>
                 <ul class="points">
                   <li>Built and deployed a <b>Learning Reinforcement Web App</b> used by 5,000+ learners worldwide.</li>
-                  <li>Cut page load time by <b>35%</b> and raised developer efficiency by <b>70%</b> through reusable components.</li>
-                  <li>Led front-end development and mentored 3 junior developers, improving on-time delivery by <b>80%</b> with Agile.</li>
+                  <li>Cut page load time by <b>35%</b> and raised developer efficiency by <b>70%</b> through reusable component architecture.</li>
+                  <li>Led frontend development and mentored 3 junior engineers, improving on-time delivery by <b>80%</b> with Agile practices.</li>
                 </ul>
               </div>
             </div>
             <div class="chips">
-              <span class="chip">Next.js 14</span><span class="chip">React</span><span class="chip">TypeScript</span>
-              <span class="chip">Tailwind</span><span class="chip">Redux</span><span class="chip">Anthropic API</span>
-              <span class="chip">ImageKit</span><span class="chip">Vercel</span>
+              <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span>
+              <span class="chip">Redux</span><span class="chip">Tailwind CSS</span><span class="chip">REST API</span>
             </div>
           </div>
         </div>
@@ -283,10 +331,10 @@
             <div class="where">Hong Kong · Remote</div>
           </div>
           <div>
-            <h3>theOrigo Ltd <small>· Full Stack Developer</small></h3>
+            <h3>theOrigo Ltd <small>· Full Stack Developer (Contract)</small></h3>
             <ul class="points">
-              <li>Enhanced and maintained web platforms for <b>Consumer Council Hong Kong</b>, including a dedicated site for mainland visitors.</li>
-              <li>Built and optimised features for <b>Oxfam Hong Kong</b>'s programmes, donations and advocacy campaigns.</li>
+              <li>Improved functionality and UX for <b>Consumer Council Hong Kong</b> — consumer advice centres, the monthly magazine, and a dedicated site for mainland visitors.</li>
+              <li>Developed and optimised features for <b>Oxfam Hong Kong</b>'s global initiatives, donations and advocacy campaigns.</li>
             </ul>
             <div class="chips"><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">JavaScript</span><span class="chip">React</span></div>
           </div>
@@ -300,29 +348,29 @@
           <div>
             <h3>PT EDI Indonesia <small>· Full Stack Developer</small></h3>
             <ul class="points">
-              <li>Led a React-based <b>Non-Container Operating System</b> for IPC – Pelindo 2, integrated with the New Billing System.</li>
-              <li>Sped up development by <b>80%</b> with a reusable global API, and cut development cost by <b>60%</b> with a modular component library.</li>
-              <li>Reduced manual processes by <b>40%</b>; built dashboards and bank-payment integrations for vessel movement and monitoring.</li>
+              <li>Led React-based <b>Non-Container Operating Systems</b> for IPC / Pelindo II (Banten and Palembang ports), integrated with the New Billing System.</li>
+              <li>Architected a Reusable Global API — development <b>80% faster</b> and <b>60% cheaper</b> via a modular component library.</li>
+              <li>Reduced manual processes by <b>40%</b>; built real-time operational and financial dashboards and external bank-payment integrations.</li>
             </ul>
-            <div class="chips"><span class="chip">React</span><span class="chip">Lumen</span><span class="chip">Laravel</span><span class="chip">REST API</span></div>
+            <div class="chips"><span class="chip">React</span><span class="chip">Lumen / Laravel</span><span class="chip">PHP</span><span class="chip">MySQL</span></div>
           </div>
         </div>
 
         <div class="job">
           <div>
-            <div class="when mono">2018 — 2021</div>
-            <div class="where">East Java · Freelance</div>
+            <div class="when mono">Jan 2018 — Jan 2021</div>
+            <div class="where">Indonesia · Freelance</div>
           </div>
           <div>
-            <h3>Freelance &amp; software house <small>· Full Stack Developer</small></h3>
-            <p class="role-sub">Custom web systems for enterprises, schools and SMEs — with Startup Tuna Asmara and independently.</p>
+            <h3>Freelance Full-Stack Developer <small>· Indonesian enterprises</small></h3>
+            <p class="role-sub">Delivered 10+ web applications across logistics, energy, education and safety.</p>
             <div class="freelance">
-              <div class="fl"><b>PT Jasa Marga</b><span>Real-time vehicle tracking &amp; emergency reporting for a toll road</span><em class="mono">2019</em></div>
-              <div class="fl"><b>PT Pertamina</b><span>Activity reporting &amp; monitoring for a fuel oil terminal</span><em class="mono">2019</em></div>
-              <div class="fl"><b>PT Semen Gresik · PT PJB</b><span>Safety inspection &amp; accident reporting apps</span><em class="mono">2019</em></div>
-              <div class="fl"><b>SDN Pakis V Surabaya</b><span>School information, academic &amp; quality management</span><em class="mono">2019</em></div>
-              <div class="fl"><b>PPNS</b><span>Polyclinic management with patient self-diagnosis</span><em class="mono">2018 — 2019</em></div>
-              <div class="fl"><b>Onklas · Axlindo · Sumito Teknik</b><span>School platform, e-commerce and business systems</span><em class="mono">2018</em></div>
+              <div class="fl"><b>PT Jasa Marga</b><span>Operational dashboards &amp; real-time fleet tracking for toll road management</span></div>
+              <div class="fl"><b>PT Pertamina</b><span>Activity reporting &amp; monitoring for the Fuel Oil Terminal, Surabaya</span></div>
+              <div class="fl"><b>PT Semen Gresik · PT PJB</b><span>Safety inspection &amp; accident reporting systems</span></div>
+              <div class="fl"><b>SDN Pakis V · PPNS · Onklas</b><span>School and polyclinic management platforms</span></div>
+              <div class="fl"><b>CV Axlindoo · PT Sumito Teknik</b><span>E-commerce and business management tools</span></div>
+              <div class="fl"><b>Stack</b><span>PHP, Laravel, JavaScript, MySQL</span></div>
             </div>
           </div>
         </div>
@@ -336,42 +384,47 @@
         <h2>Things I'm proud of</h2>
         <div class="projects">
           <article class="project wide">
-            <div class="kicker mono">EdTech · The KPI Institute</div>
+            <div class="kicker mono">EdTech · Solo founder</div>
+            <h3>RuangKelasku.com</h3>
+            <p>A production EdTech platform I designed and shipped on my own with AI-assisted development —
+               product decisions, architecture, integration and deployment — with AI-powered course
+               recommendations via the Anthropic API.</p>
+            <div class="stack mono">Next.js 16 · TypeScript · Tailwind CSS · ImageKit · Anthropic API · Vercel</div>
+            <div style="margin-top:14px"><a class="ext" href="https://ruangkelasku.com" target="_blank" rel="noopener">Visit ruangkelasku.com ↗</a></div>
+          </article>
+          <article class="project">
+            <div class="kicker mono">EdTech · The KPI Institute (AU)</div>
             <h3>Learning Reinforcement Web App</h3>
-            <p>A platform that keeps learning going after the course ends — group creation, leaderboards,
-               personalised learning paths and interactive quizzes, used by professionals around the world.</p>
+            <p>Frontend lead for a learning platform with group creation, leaderboards, personalised learning paths and interactive quizzes.</p>
             <div class="metrics">
               <div><b>5,000+</b><span>learners</span></div>
-              <div><b>−35%</b><span>page load time</span></div>
-              <div><b>+70%</b><span>dev efficiency</span></div>
+              <div><b>−35%</b><span>page load</span></div>
             </div>
+            <div class="stack mono">Next.js · React · Redux · Tailwind CSS · REST API</div>
           </article>
           <article class="project">
-            <div class="kicker mono">Logistics · IPC – Pelindo 2</div>
-            <h3>Non-Container Operating System</h3>
-            <p>Stuffing/stripping operations for the Banten and Palembang ports, wired into billing and bank payments.</p>
+            <div class="kicker mono">Logistics · PT EDI / Pelindo II</div>
+            <h3>Non-Container Port Operations System</h3>
+            <p>React operating system for Indonesia's largest port operator, wired into the New Billing System and bank payment APIs.</p>
             <div class="metrics">
-              <div><b>80%</b><span>faster delivery</span></div>
+              <div><b>80%</b><span>faster dev</span></div>
               <div><b>−60%</b><span>dev cost</span></div>
             </div>
-          </article>
-          <article class="project">
-            <div class="kicker mono">Non-profit · Hong Kong</div>
-            <h3>Consumer Council &amp; Oxfam HK</h3>
-            <p>Enhancements to two high-traffic public platforms: consumer advice and publications, and donations and advocacy.</p>
-          </article>
-          <article class="project">
-            <div class="kicker mono">Infrastructure · PT Jasa Marga</div>
-            <h3>Toll Road Operations Dashboard</h3>
-            <p>Centralised vehicle tracking with speed and travel history, plus a faster emergency reporting flow.</p>
-          </article>
-          <article class="project">
-            <a href="https://chalidade.github.io/weeknoo/" style="position:absolute;inset:0" aria-label="Open weeknoo"></a>
-            <div class="kicker mono">Side project ↗</div>
-            <h3>weeknoo</h3>
-            <p>A website workspace that turns a prompt into a deployed site, an Android APK or a WordPress theme.</p>
+            <div class="stack mono">React · Lumen / Laravel · MySQL</div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== BUILDS (data: builds.js) ===================== -->
+    <section id="builds">
+      <div class="wrap">
+        <div class="label mono">Builds</div>
+        <div class="section-head">
+          <h2>Repos &amp; tools I'm building</h2>
+          <p>Side projects, open-source repos and small tools — shipped in public.</p>
+        </div>
+        <div class="builds" id="buildList"></div>
       </div>
     </section>
 
@@ -382,70 +435,83 @@
         <h2>What I work with</h2>
         <div class="skills">
           <div class="skill-group">
-            <h3>Front-end</h3>
+            <h3>Frontend</h3>
             <div class="chips">
-              <span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">TypeScript</span>
-              <span class="chip">Redux</span><span class="chip">Tailwind CSS</span><span class="chip">HTML5</span>
-              <span class="chip">CSS3</span><span class="chip">Bootstrap</span>
+              <span class="chip">React</span><span class="chip">Next.js 16 (App Router)</span><span class="chip">TypeScript</span>
+              <span class="chip">Redux</span><span class="chip">Tailwind CSS</span><span class="chip">HTML5 / CSS3</span>
+              <span class="chip">Performance optimisation</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3>Back-end</h3>
+            <h3>AI &amp; agentic development</h3>
+            <div class="chips">
+              <span class="chip">Anthropic API</span><span class="chip">Vercel AI SDK</span><span class="chip">Claude Code</span>
+              <span class="chip">Cursor</span><span class="chip">Prompt engineering</span><span class="chip">Structured outputs</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Backend</h3>
             <div class="chips">
               <span class="chip">Node.js</span><span class="chip">PHP</span><span class="chip">Laravel</span>
               <span class="chip">Lumen</span><span class="chip">REST API</span><span class="chip">GraphQL</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3>Tools &amp; DevOps</h3>
+            <h3>Testing &amp; quality</h3>
             <div class="chips">
-              <span class="chip">Git</span><span class="chip">GitHub Actions</span><span class="chip">Docker</span>
-              <span class="chip">Jira</span><span class="chip">Postman</span><span class="chip">Vercel</span>
-              <span class="chip">Netlify</span><span class="chip">Jest</span>
+              <span class="chip">Jest</span><span class="chip">Playwright</span><span class="chip">Code review</span>
+              <span class="chip">CI/CD (GitHub Actions)</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <div class="chips">
+              <span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Jira</span>
+              <span class="chip">Postman</span><span class="chip">Vercel</span>
             </div>
           </div>
           <div class="skill-group">
             <h3>Leadership</h3>
             <div class="chips">
               <span class="chip">Agile / Scrum</span><span class="chip">Sprint planning</span><span class="chip">Mentoring</span>
-              <span class="chip">Remote teams</span><span class="chip">Performance optimisation</span>
+              <span class="chip">Remote teams</span><span class="chip">Cross-functional collaboration</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== CERTS + EDUCATION ===================== -->
+    <!-- ===================== BACKGROUND ===================== -->
     <section id="background">
       <div class="wrap">
         <div class="label mono">Background</div>
-        <h2>Certifications &amp; education</h2>
+        <h2>Community, education &amp; certifications</h2>
         <div class="two-col">
           <div>
-            <h3 class="small-h">Certifications</h3>
+            <h3 class="small-h">Community &amp; speaking</h3>
+            <ul class="talks">
+              <li><span class="role mono">Founder</span><div><b>@sambatngoding</b><span>Indonesian programming YouTube community</span></div></li>
+              <li><span class="role mono">Speaker</span><div><b>Surviving and Thriving: Insights from Senior Developers</b><span>Webinar 3.0 · Feb 2024</span></div></li>
+              <li><span class="role mono">Mentor</span><div><b>Full Stack Developer Bootcamp</b><span>Peduli Digital · 2021</span></div></li>
+            </ul>
+
+            <h3 class="small-h" style="margin-top:36px">Certifications</h3>
             <ul class="list">
               <li><span>React Basics</span><span>Meta</span></li>
               <li><span>Programming with JavaScript</span><span>Meta</span></li>
-              <li><span>HTML and CSS in depth</span><span>Meta</span></li>
+              <li><span>HTML and CSS in Depth</span><span>Meta</span></li>
               <li><span>Version Control</span><span>Meta</span></li>
               <li><span>Introduction to Front-End Development</span><span>Meta</span></li>
               <li><span>Front-End Web UI Frameworks: Bootstrap 4 (Honors)</span><span>HKUST</span></li>
-              <li><span>Certified Fiber Optic Specialist</span><span>BNSP</span></li>
-              <li><span>Core Network Planner</span><span>BNSP</span></li>
-              <li><span>Telecommunications Junior Engineer</span><span>BNSP</span></li>
             </ul>
           </div>
           <div>
             <h3 class="small-h">Education</h3>
             <div class="edu">
-              <b>Politeknik Elektronika Negeri Surabaya</b>
+              <b>Electronic Engineering Polytechnic Institute of Surabaya (EEPIS / PENS)</b>
               <span>Associate of Science, Telecommunication Engineering</span>
               <span class="mono" style="font-size:12px">2016 — 2019</span>
-            </div>
-            <div class="edu">
-              <b>SMK Negeri 3 Buduran</b>
-              <span>Computer Systems Networking &amp; Telecommunications</span>
-              <span class="mono" style="font-size:12px">2011 — 2014</span>
+              <span style="font-size:13px;margin-top:8px">Indonesia's #1-ranked polytechnic (Webometrics 2025); top-5 engineering polytechnic in Asia (SCImago 2022).</span>
             </div>
 
             <h3 class="small-h" style="margin-top:36px">Languages</h3>
@@ -467,6 +533,7 @@
         <div class="cta">
           <a class="btn primary" href="mailto:chalidade@gmail.com">chalidade@gmail.com</a>
           <a class="btn" href="https://linkedin.com/in/chalidaderahman" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/chalidade" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
     </section>
@@ -479,10 +546,35 @@
     </div>
   </footer>
 
+  <script src="builds.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Light/dark: follows the system, toggle remembered per browser.
+    // ---- Builds: rendered from window.BUILDS (builds.js) ----
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+    const ICON_REPO = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>';
+    const ICON_LINK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>';
+    const STATUS = { live: "Live", wip: "In progress", archived: "Archived" };
+
+    const builds = Array.isArray(window.BUILDS) ? window.BUILDS : [];
+    document.getElementById("buildList").innerHTML = builds.map((b) => `
+      <article class="build">
+        <div class="build-top">
+          <div class="build-icon">${esc(b.icon || (b.name || "?").charAt(0).toUpperCase())}</div>
+          ${b.status ? `<span class="badge ${esc(b.status)}">${esc(STATUS[b.status] || b.status)}</span>` : ""}
+        </div>
+        <h3>${esc(b.name)}</h3>
+        <p>${esc(b.description)}</p>
+        ${b.tags?.length ? `<div class="chips">${b.tags.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div>` : ""}
+        ${b.repo || b.url ? `<div class="build-links">
+          ${b.repo ? `<a href="${esc(b.repo)}" target="_blank" rel="noopener">${ICON_REPO} Source</a>` : ""}
+          ${b.url ? `<a href="${esc(b.url)}" target="_blank" rel="noopener">${ICON_LINK} Live</a>` : ""}
+        </div>` : ""}
+      </article>`).join("") + `
+      <div class="build placeholder">More on the way —<br>follow along on <a href="https://github.com/chalidade" style="text-decoration:underline">GitHub</a>.</div>`;
+
+    // ---- Light/dark: follows the system, toggle remembered per browser ----
     const root = document.documentElement;
     try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch {}
     document.getElementById("themeBtn").onclick = () => {
