@@ -3,16 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>weeknoo</title>
-  <meta http-equiv="refresh" content="0; url=/weeknoo/">
-  <link rel="canonical" href="https://chalidade.github.io/weeknoo/">
-  <script>
-    // Teruskan path, query & hash: /foo?x#y → /weeknoo/foo?x#y
-    var p = location.pathname.replace(/^\/+/, "");
-    location.replace("/weeknoo/" + p + location.search + location.hash);
-  </script>
+  <title>Tidak ditemukan</title>
+  <style>
+    :root { --bg: #fafaf9; --fg: #1c1917; --muted: #78716c; --accent: #c2410c; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0c0a09; --fg: #f5f5f4; --muted: #a8a29e; --accent: #fb923c; }
+    }
+    body {
+      background: var(--bg); color: var(--fg); margin: 0; min-height: 100vh;
+      display: grid; place-items: center; padding: 16px; box-sizing: border-box;
+      font: 400 16px/1.6 system-ui, sans-serif; text-align: center;
+    }
+    h1 { font: 400 64px/1 Georgia, serif; margin: 0 0 12px; color: var(--accent); }
+    p { color: var(--muted); margin: 0 0 20px; }
+    a { color: var(--fg); }
+  </style>
 </head>
-<body style="background:#0a0a0a;color:#ededed;font-family:system-ui,sans-serif">
-  <p>Mengalihkan ke <a href="/weeknoo/" style="color:inherit">chalidade.github.io/weeknoo</a>…</p>
+<body>
+  <div>
+    <h1>404</h1>
+    <p>Halaman ini tidak ada.</p>
+    <a href="/">← Kembali ke beranda</a>
+  </div>
 </body>
 </html>

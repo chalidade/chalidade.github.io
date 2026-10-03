@@ -3,16 +3,235 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>weeknoo</title>
-  <meta http-equiv="refresh" content="0; url=/weeknoo/">
-  <link rel="canonical" href="https://chalidade.github.io/weeknoo/">
-  <script>
-    // Teruskan path, query & hash: /foo?x#y → /weeknoo/foo?x#y
-    var p = location.pathname.replace(/^\/+/, "");
-    location.replace("/weeknoo/" + p + location.search + location.hash);
-  </script>
+  <title>Chalid Ade Rahman</title>
+  <meta name="description" content="Portfolio dan catatan progres belajar Chalid Ade Rahman.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9; --fg: #1c1917; --muted: #78716c; --card: #ffffff;
+      --border: #e7e5e4; --accent: #c2410c; --accent-soft: #ffedd5; --track: #f5f5f4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0c0a09; --fg: #f5f5f4; --muted: #a8a29e; --card: #1c1917;
+        --border: #292524; --accent: #fb923c; --accent-soft: #431407; --track: #292524;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0c0a09; --fg: #f5f5f4; --muted: #a8a29e; --card: #1c1917;
+      --border: #292524; --accent: #fb923c; --accent-soft: #431407; --track: #292524;
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      background: var(--bg); color: var(--fg);
+      font: 400 16px/1.6 Inter, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+    .serif { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+    header.top { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
+    header.top nav { display: flex; gap: 20px; font-size: 14px; color: var(--muted); }
+    header.top nav a { text-decoration: none; }
+    header.top nav a:hover { color: var(--fg); }
+    .theme-btn {
+      background: none; border: 1px solid var(--border); color: var(--muted);
+      border-radius: 999px; width: 32px; height: 32px; cursor: pointer; font-size: 14px;
+    }
+
+    .hero { padding: 72px 0 56px; }
+    .hero .eyebrow { font-size: 13px; color: var(--accent); letter-spacing: .04em; }
+    .hero h1 { font-size: clamp(44px, 9vw, 76px); line-height: 1; margin: 16px 0 20px; letter-spacing: -.01em; }
+    .hero h1 em { color: var(--accent); }
+    .hero p { color: var(--muted); max-width: 54ch; font-size: 17px; }
+
+    section { padding: 48px 0; border-top: 1px solid var(--border); }
+    section h2 { font-size: 34px; margin-bottom: 6px; }
+    section .sub { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+    .stat { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    .stat b { display: block; font-size: 28px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .stat span { font-size: 13px; color: var(--muted); }
+
+    .skill { margin-bottom: 18px; }
+    .skill-head { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; margin-bottom: 6px; }
+    .skill-head span:last-child { color: var(--muted); font-size: 13px; text-align: right; }
+    .bar { height: 8px; background: var(--track); border-radius: 999px; overflow: hidden; }
+    .bar i { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+
+    .log { list-style: none; padding: 0; }
+    .log li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px dashed var(--border); }
+    .log li:last-child { border-bottom: 0; }
+    .log time { font-size: 12px; color: var(--muted); padding-top: 3px; }
+    .log h3 { font-size: 15px; font-weight: 600; }
+    .log p { font-size: 14px; color: var(--muted); }
+    .tag {
+      display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--accent); margin-left: 6px; vertical-align: 2px;
+    }
+
+    .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .project {
+      display: block; text-decoration: none; background: var(--card);
+      border: 1px solid var(--border); border-radius: 14px; padding: 20px; transition: border-color .15s;
+    }
+    a.project:hover { border-color: var(--accent); }
+    .project h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .project p { font-size: 14px; color: var(--muted); }
+    .project .stack { font-size: 12px; color: var(--muted); margin-top: 12px; }
+
+    footer { padding: 48px 0 64px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    footer .links { display: flex; gap: 20px; margin-top: 8px; }
+
+    @media (max-width: 560px) {
+      header.top nav { display: none; }
+      .stats { gap: 8px; }
+      .stat { padding: 12px; } .stat b { font-size: 22px; }
+      .projects { grid-template-columns: 1fr; }
+      .log li { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
 </head>
-<body style="background:#0a0a0a;color:#ededed;font-family:system-ui,sans-serif">
-  <p>Mengalihkan ke <a href="/weeknoo/" style="color:inherit">chalidade.github.io/weeknoo</a>…</p>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <span class="serif" style="font-size:22px">chalid.</span>
+      <div style="display:flex;gap:20px;align-items:center">
+        <nav>
+          <a href="#belajar">Belajar</a>
+          <a href="#log">Log</a>
+          <a href="#proyek">Proyek</a>
+        </nav>
+        <button class="theme-btn" id="themeBtn" aria-label="Ganti tema">◐</button>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="eyebrow mono">// portfolio &amp; jurnal belajar</div>
+      <h1 class="serif">Halo, saya <em>Chalid</em>.</h1>
+      <p>Software engineer. Di sini saya mencatat apa yang sedang saya pelajari,
+         latihan harian, dan proyek yang sedang saya kerjakan.</p>
+    </div>
+
+    <section id="belajar">
+      <h2 class="serif">Sedang dipelajari</h2>
+      <p class="sub">Progres kasar per topik. Diperbarui sesekali.</p>
+      <div class="stats" id="stats"></div>
+      <div id="skills"></div>
+    </section>
+
+    <section id="log">
+      <h2 class="serif">Log latihan</h2>
+      <p class="sub">Catatan singkat, terbaru di atas.</p>
+      <ul class="log" id="logList"></ul>
+    </section>
+
+    <section id="proyek">
+      <h2 class="serif">Proyek</h2>
+      <p class="sub">Hal-hal yang saya bangun.</p>
+      <div class="projects" id="projectList"></div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Chalid Ade Rahman</div>
+      <div class="links">
+        <a href="https://github.com/chalidade">GitHub</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // ================================================================
+    //  EDIT DI SINI — semua isi halaman diambil dari data di bawah.
+    //  Isi saat ini masih CONTOH; ganti dengan milikmu sendiri.
+    // ================================================================
+
+    // Topik yang sedang dipelajari. progress: 0–100.
+    const SKILLS = [
+      { name: "TypeScript lanjutan",       progress: 70, note: "generics, type narrowing" },
+      { name: "React 19",                  progress: 60, note: "server components, actions" },
+      { name: "Algoritma & struktur data", progress: 35, note: "latihan rutin" },
+      { name: "Bahasa Inggris",            progress: 50, note: "speaking" },
+    ];
+
+    // Log latihan. date: "YYYY-MM-DD", tag opsional.
+    const LOG = [
+      { date: "2026-10-03", title: "Membuat halaman portfolio ini", tag: "web",
+        body: "Satu file HTML statis di GitHub Pages, datanya diedit di satu tempat." },
+      { date: "2026-10-01", title: "Latihan: two pointers", tag: "dsa",
+        body: "Contoh entri — ganti dengan catatan latihanmu." },
+      { date: "2026-09-28", title: "Belajar Tailwind CSS v4", tag: "web",
+        body: "Contoh entri — tema lewat @theme, tanpa tailwind.config.js." },
+    ];
+
+    // Proyek. url opsional.
+    const PROJECTS = [
+      { name: "weeknoo", url: "https://chalidade.github.io/weeknoo/",
+        desc: "Workspace website: dari prompt jadi situs, APK, dan tema WordPress.",
+        stack: "Vite · React · Tailwind · Capacitor" },
+      { name: "Proyek berikutnya", url: "",
+        desc: "Contoh kartu — ganti atau hapus.", stack: "—" },
+    ];
+
+    // ================================================================
+
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+    const fmtDate = (d) => new Date(d + "T00:00:00").toLocaleDateString("id-ID",
+      { day: "numeric", month: "short", year: "numeric" });
+
+    const avg = SKILLS.length ? Math.round(SKILLS.reduce((a, s) => a + s.progress, 0) / SKILLS.length) : 0;
+    document.getElementById("stats").innerHTML = [
+      [SKILLS.length, "topik aktif"],
+      [LOG.length, "catatan latihan"],
+      [avg + "%", "rata-rata progres"],
+    ].map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+
+    document.getElementById("skills").innerHTML = SKILLS.map((s) => `
+      <div class="skill">
+        <div class="skill-head"><span>${esc(s.name)}</span><span>${esc(s.note || "")} · ${s.progress}%</span></div>
+        <div class="bar"><i style="width:${Math.max(0, Math.min(100, s.progress))}%"></i></div>
+      </div>`).join("");
+
+    document.getElementById("logList").innerHTML = [...LOG]
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .map((e) => `
+        <li>
+          <time class="mono" datetime="${esc(e.date)}">${fmtDate(e.date)}</time>
+          <div>
+            <h3>${esc(e.title)}${e.tag ? `<span class="tag mono">${esc(e.tag)}</span>` : ""}</h3>
+            <p>${esc(e.body || "")}</p>
+          </div>
+        </li>`).join("");
+
+    document.getElementById("projectList").innerHTML = PROJECTS.map((p) => {
+      const tag = p.url ? "a" : "div";
+      const href = p.url ? ` href="${esc(p.url)}"` : "";
+      return `<${tag} class="project"${href}>
+        <h3>${esc(p.name)}${p.url ? " ↗" : ""}</h3>
+        <p>${esc(p.desc)}</p>
+        <div class="stack mono">${esc(p.stack)}</div>
+      </${tag}>`;
+    }).join("");
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Tema terang/gelap: ikut sistem, bisa di-toggle, diingat per browser.
+    const root = document.documentElement;
+    try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch {}
+    document.getElementById("themeBtn").onclick = () => {
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem("theme", root.dataset.theme); } catch {}
+    };
+  </script>
 </body>
 </html>
