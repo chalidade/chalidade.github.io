@@ -26,13 +26,4 @@ window.BUILDS = [
     status: "live",
     icon: "W",
   },
-  {
-    name: "RuangKelasku",
-    description:
-      "EdTech platform built solo with AI-assisted development; currently adding AI course recommendations via the Anthropic API.",
-    url: "https://ruangkelasku.vercel.app",
-    tags: ["Next.js", "TypeScript", "Anthropic API"],
-    status: "live",
-    icon: "R",
-  },
 ]
