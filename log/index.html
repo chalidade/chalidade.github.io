@@ -87,7 +87,7 @@
     section h2 { font-size: 26px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 32px; }
 
     /* timeline */
-    .entry { display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 28px 0; border-top: 1px dashed var(--border); }
+    .entry { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 24px; padding: 28px 0; border-top: 1px dashed var(--border); }
     .entry:first-child { border-top: 0; padding-top: 0; }
     .entry .when { font-size: 13px; color: var(--muted); padding-top: 4px; }
     .entry .when small { display: block; color: var(--subtle); font-size: 12px; }
@@ -112,8 +112,10 @@
     .md img { max-width: 100%; border-radius: 10px; }
 
     /* notes */
-    .notes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .note { padding: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
+    /* minmax(0, 1fr), not 1fr: a plain 1fr column never shrinks below its widest
+       content, so a code block or long URL pushed the cards past the screen. */
+    .notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .note { min-width: 0; padding: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
     .note h3 { font-size: 17px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 8px; }
 
     .state { color: var(--muted); font-size: 15px; }
@@ -130,8 +132,9 @@
       .head { padding-top: 56px; padding-bottom: 40px; }
       .stat { padding: 14px; }
       .stat b { font-size: 20px; }
-      .entry { grid-template-columns: 1fr; gap: 6px; }
-      .notes { grid-template-columns: 1fr; }
+      .entry { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+      .notes { grid-template-columns: minmax(0, 1fr); }
+      .note { padding: 18px; }
     }
   </style>
 </head>
