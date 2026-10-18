@@ -17,6 +17,25 @@
 
 window.BUILDS = [
   {
+    name: "Kita Berkembang",
+    description:
+      "A store builder for Indonesian small businesses: each store gets its own subdomain and orders land in WhatsApp. Prices, stock and vouchers are recomputed on the server, and CI runs 104 PHPUnit and 32 Playwright tests before every deploy.",
+    url: "https://kitaberkembang.com",
+    tags: ["WordPress Multisite", "PHP", "PHPUnit", "Playwright", "Docker"],
+    status: "live",
+    icon: "K",
+  },
+  {
+    name: "tools",
+    description:
+      "My everyday file toolbox, free for everyone: 36 tools for PDF, Office, image, video, audio and QR files that run entirely in the browser, so files never leave the device.",
+    repo: "https://github.com/chalidade/tools",
+    url: "https://chalidade.github.io/tools/",
+    tags: ["React", "TypeScript", "pdf.js", "qpdf-wasm", "WebCodecs"],
+    status: "live",
+    icon: "T",
+  },
+  {
     name: "weeknoo",
     description:
       "A website workspace that turns a prompt into a deployed site, an Android APK or a WordPress block theme.",
@@ -25,15 +44,5 @@ window.BUILDS = [
     tags: ["React", "Vite", "Tailwind", "Capacitor", "Claude Code"],
     status: "live",
     icon: "W",
-  },
-  {
-    name: "tools",
-    description:
-      "Privacy-first file converters that run entirely in the browser — Word, PDF, PowerPoint and images, with nothing uploaded to a server.",
-    repo: "https://github.com/chalidade/tools",
-    url: "https://chalidade.github.io/tools/",
-    tags: ["React", "TypeScript", "pdf.js", "jsPDF", "Client-side"],
-    status: "live",
-    icon: "T",
   },
 ]
