@@ -28,7 +28,7 @@ window.BUILDS = [
   {
     name: "tools",
     description:
-      "My everyday file toolbox, free for everyone: 36 tools for PDF, Office, image, video, audio and QR files that run entirely in the browser, so files never leave the device.",
+      "My everyday file toolbox, free for everyone: 38 tools for PDF, Office, image, video, audio and QR files that run entirely in the browser, so files never leave the device.",
     repo: "https://github.com/chalidade/tools",
     url: "https://chalidade.github.io/tools/",
     tags: ["React", "TypeScript", "pdf.js", "qpdf-wasm", "WebCodecs"],
