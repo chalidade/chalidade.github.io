@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# The tools site (https://chalidade.github.io/tools/) lists every tool page here.
+Sitemap: https://chalidade.github.io/tools/sitemap.xml
