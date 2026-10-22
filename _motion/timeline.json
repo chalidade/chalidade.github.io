@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "fps": 24.0,
+  "frameDuration": 0.041666666666666664,
+  "frameCount": 212,
+  "initialState": "rest",
+  "states": [
+    {
+      "id": "rest",
+      "frame": 0,
+      "hold": 0.0
+    },
+    {
+      "id": "waved",
+      "frame": 92,
+      "hold": 3.8333333333333335
+    },
+    {
+      "id": "introduced",
+      "frame": 211,
+      "hold": 8.791666666666666
+    }
+  ],
+  "segments": [
+    {
+      "id": "rest->waved",
+      "from": "rest",
+      "to": "waved",
+      "sourceFrames": {
+        "start": 0,
+        "hold": 92,
+        "endExclusive": 93
+      },
+      "frames": {
+        "start": 0,
+        "hold": 92,
+        "endExclusive": 93
+      },
+      "start": 0.0,
+      "hold": 3.8333333333333335,
+      "endExclusive": 3.875,
+      "curve": {
+        "type": "constant",
+        "rate": 1.0
+      }
+    },
+    {
+      "id": "waved->introduced",
+      "from": "waved",
+      "to": "introduced",
+      "sourceFrames": {
+        "start": 93,
+        "hold": 211,
+        "endExclusive": 212
+      },
+      "frames": {
+        "start": 93,
+        "hold": 211,
+        "endExclusive": 212
+      },
+      "start": 3.875,
+      "hold": 8.791666666666666,
+      "endExclusive": 8.833333333333334,
+      "curve": {
+        "type": "constant",
+        "rate": 1.0
+      }
+    }
+  ]
+}

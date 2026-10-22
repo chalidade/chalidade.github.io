@@ -1,0 +1,54 @@
+{
+  "display": {
+    "width": 240,
+    "height": 400,
+    "dpr": 2.0
+  },
+  "requiredCell": {
+    "width": 480,
+    "height": 800
+  },
+  "frames": 212,
+  "texture": {
+    "maxSize": 4096,
+    "columnsPerSheet": 8,
+    "rowsPerSheet": 5,
+    "framesPerSheet": 40,
+    "sheetCount": 6
+  },
+  "decodedFrameMemoryMiB": 310.5,
+  "sourceCheck": {
+    "width": 720,
+    "height": 1200,
+    "required_width": 480,
+    "required_height": 800,
+    "width_ratio": 1.5,
+    "height_ratio": 1.5,
+    "passes": true
+  },
+  "cellCheck": null,
+  "temporalCheck": null,
+  "driver": "pointer",
+  "parameterSpace": "linear",
+  "timeControl": "segment-play",
+  "access": "sequential",
+  "backgroundOwner": "page",
+  "delivery": {
+    "selected": "chroma-video",
+    "reasonCodes": [
+      "long-linear-sequence"
+    ],
+    "atlasWithinBudget": false,
+    "thresholds": {
+      "atlasMaxSheets": 1,
+      "atlasMaxDecodedMemoryMiB": 192.0,
+      "linearVideoMinFrames": 180
+    }
+  },
+  "runtime": {
+    "renderer": "webgl-chroma-video",
+    "controller": "segment-playback"
+  },
+  "failures": [],
+  "passes": true
+}

@@ -1,0 +1,352 @@
+{
+  "source": {
+    "path": "<build>/src/green-master.mp4",
+    "width": 720,
+    "height": 1200,
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "width": 720,
+          "height": 1200,
+          "coded_width": 720,
+          "coded_height": 1200,
+          "closed_captions": 0,
+          "film_grain": 0,
+          "has_b_frames": 2,
+          "pix_fmt": "yuv420p",
+          "level": 31,
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "refs": 1,
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "time_base": "1/12288",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 108544,
+          "duration": "8.833333",
+          "bit_rate": "5848807",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "212",
+          "extradata_size": 47,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "vendor_id": "[0][0][0][0]",
+            "encoder": "Lavc60.31.102 libx264"
+          }
+        }
+      ],
+      "format": {
+        "filename": "<build>/src/green-master.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "8.833333",
+        "size": "6461550",
+        "bit_rate": "5851970",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf60.16.100"
+        }
+      }
+    }
+  },
+  "compile": {
+    "backgroundOwner": "page",
+    "framePolicy": "native",
+    "sourceKeyColor": "#00FF00",
+    "runtimeKeyColor": "#00FD00",
+    "sourceKeyValidation": {
+      "kind": "green",
+      "borderSpreadP95Max": 22,
+      "checkedFrames": 48
+    },
+    "fps": 24.0,
+    "rawFrameCount": 212,
+    "finalFrameCount": 212,
+    "alphaQaFrameCount": 48,
+    "duration": 8.833333333333334,
+    "cleanup": "none",
+    "duplicateThreshold": 0.003,
+    "seamWindow": 40,
+    "framePreparationReport": "<build>/build/compiled-c22/frame-preparation/frame-preparation-report.json",
+    "framePreparationVerdict": {
+      "passedAutomaticChecks": true,
+      "manualReviewRequired": true
+    },
+    "budgetReport": "<build>/build/motion-budget.json",
+    "selection": {
+      "selected": "chroma-video",
+      "reasonCodes": [
+        "long-linear-sequence"
+      ],
+      "atlasWithinBudget": false,
+      "thresholds": {
+        "atlasMaxSheets": 1,
+        "atlasMaxDecodedMemoryMiB": 192.0,
+        "linearVideoMinFrames": 180
+      }
+    },
+    "timeline": "<build>/build/timeline-c22.json",
+    "postEncodeKeyingReport": "<build>/build/compiled-c22/qa/post-encode-keying.json",
+    "postEncodeKeyingPassed": true,
+    "intermediateFramesRetained": false
+  },
+  "runtime": {
+    "type": "chroma-video",
+    "frameCount": 212,
+    "fps": 24.0,
+    "keying": {
+      "algorithm": "dominance-v2",
+      "mode": "green",
+      "keyColor": [
+        0,
+        253,
+        0
+      ],
+      "similarity": 0.12,
+      "smoothness": 0.06,
+      "dominanceStart": 0.0,
+      "dominanceEnd": 0.12,
+      "spillStart": -0.005,
+      "spillEnd": 0.06,
+      "spill": 1.0
+    },
+    "anchors": {},
+    "posterFrame": 0,
+    "assets": {
+      "poster": "final/poster-alpha.png",
+      "desktop": "final/motion-chroma-desktop.mp4",
+      "mobile": "final/motion-chroma-mobile.mp4",
+      "timeline": "timeline.json"
+    }
+  },
+  "outputs": {
+    "poster": {
+      "path": "<build>/build/compiled-c22/final/poster-alpha.png",
+      "alpha": true,
+      "sourceFrame": 0,
+      "finalFrame": 0
+    },
+    "desktop": {
+      "path": "<build>/build/compiled-c22/final/motion-chroma-desktop.mp4",
+      "width": 480,
+      "height": 800,
+      "bytes": 3541604,
+      "allFramesAreKeyframes": true,
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 480,
+            "height": 800,
+            "coded_width": 480,
+            "coded_height": 800,
+            "closed_captions": 0,
+            "film_grain": 0,
+            "has_b_frames": 0,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "3:5",
+            "pix_fmt": "yuv420p",
+            "level": 30,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "time_base": "1/12288",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 108544,
+            "duration": "8.833333",
+            "bit_rate": "3205933",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "212",
+            "extradata_size": 42,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc60.31.102 libx264"
+            }
+          }
+        ],
+        "format": {
+          "filename": "<build>/build/compiled-c22/final/motion-chroma-desktop.mp4",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "8.833333",
+          "size": "3541604",
+          "bit_rate": "3207490",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf60.16.100"
+          }
+        }
+      }
+    },
+    "mobile": {
+      "path": "<build>/build/compiled-c22/final/motion-chroma-mobile.mp4",
+      "width": 360,
+      "height": 600,
+      "bytes": 2022416,
+      "allFramesAreKeyframes": true,
+      "probe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 360,
+            "height": 600,
+            "coded_width": 360,
+            "coded_height": 600,
+            "closed_captions": 0,
+            "film_grain": 0,
+            "has_b_frames": 0,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "3:5",
+            "pix_fmt": "yuv420p",
+            "level": 30,
+            "chroma_location": "left",
+            "field_order": "progressive",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "id": "0x1",
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "time_base": "1/12288",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 108544,
+            "duration": "8.833333",
+            "bit_rate": "1830082",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "212",
+            "extradata_size": 43,
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "vendor_id": "[0][0][0][0]",
+              "encoder": "Lavc60.31.102 libx264"
+            }
+          }
+        ],
+        "format": {
+          "filename": "<build>/build/compiled-c22/final/motion-chroma-mobile.mp4",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+          "format_long_name": "QuickTime / MOV",
+          "start_time": "0.000000",
+          "duration": "8.833333",
+          "size": "2022416",
+          "bit_rate": "1831622",
+          "probe_score": 100,
+          "tags": {
+            "major_brand": "isom",
+            "minor_version": "512",
+            "compatible_brands": "isomiso2avc1mp41",
+            "encoder": "Lavf60.16.100"
+          }
+        }
+      }
+    }
+  }
+}
