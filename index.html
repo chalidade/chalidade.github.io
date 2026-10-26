@@ -130,6 +130,17 @@
     .roles > div + div { margin-top: 22px; }
     .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
     .chip { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: var(--chip); border: 1px solid var(--border); color: var(--muted); }
+    .kpi-years { margin-top: 22px; padding: 18px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; }
+    .kpi-years .ky-head { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+    .ky-row { display: grid; grid-template-columns: 92px 1fr 52px; gap: 12px; align-items: center; padding: 6px 0; }
+    .ky-row .y { font-size: 13px; color: var(--muted); }
+    .ky-row .bar { height: 10px; border-radius: 999px; background: var(--chip); border: 1px solid var(--border); overflow: hidden; }
+    .ky-row .bar i { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+    .ky-row .n { font-size: 13px; text-align: right; font-variant-numeric: tabular-nums; }
+    .ky-row .c { grid-column: 2 / 4; font-size: 12.5px; color: var(--muted); margin-top: -2px; }
+    .ky-row.now .y, .ky-row.now .n { color: var(--fg); font-weight: 600; }
+    .kpi-years .ky-foot { font-size: 12px; color: var(--subtle); margin-top: 10px; }
+    @media (max-width: 560px) { .ky-row { grid-template-columns: 78px 1fr 46px; gap: 8px; } .ky-row .y { white-space: nowrap; font-size: 12px; } }
 
     .freelance { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .fl { padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
@@ -301,7 +312,7 @@
         <div class="stat"><b>8+ yrs</b><span>shipping production web apps</span></div>
         <div class="stat"><b>5,000+</b><span>global learners on an app I led</span></div>
         <div class="stat"><b>−35%</b><span>page load time after optimisation</span></div>
-        <div class="stat"><b>1,700+</b><span>contributions in the past year</span></div>
+        <div class="stat"><b>2,600+</b><span>contributions in the past 12 months</span></div>
       </div>
     </div>
 
@@ -325,7 +336,7 @@
                   <li>Promoted after 5 years to run technical delivery while staying the <b>lead frontend engineer</b>.</li>
                   <li>Ship production React / Next.js / TypeScript code daily, with <b>AI-assisted (agentic) development</b> as a core part of the workflow.</li>
                   <li>Sole frontend engineer on the <b>Lerero v2</b> rebuild (white-label LMS + course marketplace) after the team was downsized, taking it to production.</li>
-                  <li>Own end-to-end delivery — scope, timeline, stakeholders and the code itself. <b>1,700+ contributions</b> in the past year.</li>
+                  <li>Own end-to-end delivery — scope, timeline, stakeholders and the code itself. <b>2,675 contributions</b> in the past 12 months, the most of any year.</li>
                 </ul>
               </div>
               <div>
@@ -340,6 +351,16 @@
             <div class="chips">
               <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span>
               <span class="chip">Redux</span><span class="chip">Tailwind CSS</span><span class="chip">REST API</span>
+            </div>
+            <div class="kpi-years" role="group" aria-label="GitHub contributions on my work account by year">
+              <div class="ky-head mono">Six years in the commit history · work account, private repos</div>
+              <div class="ky-row"><span class="y mono">2021</span><span class="bar"><i style="width:35%"></i></span><span class="n mono">941</span><span class="c">Lerero frontend and the Learning Reinforcement app</span></div>
+              <div class="ky-row"><span class="y mono">2022</span><span class="bar"><i style="width:25%"></i></span><span class="n mono">667</span><span class="c">Lerero LMS frontend</span></div>
+              <div class="ky-row"><span class="y mono">2023</span><span class="bar"><i style="width:52%"></i></span><span class="n mono">1,383</span><span class="c">LMS and the course marketplace</span></div>
+              <div class="ky-row"><span class="y mono">2024</span><span class="bar"><i style="width:35%"></i></span><span class="n mono">938</span><span class="c">LMS and marketplace</span></div>
+              <div class="ky-row"><span class="y mono">2025</span><span class="bar"><i style="width:45%"></i></span><span class="n mono">1,207</span><span class="c">Code review grew to 36% of my activity; promoted to technical lead in November</span></div>
+              <div class="ky-row now"><span class="y mono">Past year</span><span class="bar"><i style="width:100%"></i></span><span class="n mono">2,675</span><span class="c">Last 12 months: sole frontend engineer on Lerero v2, 490+ merged PRs</span></div>
+              <div class="ky-foot">5,100+ contributions from 2021 to 2025, from GitHub's contribution graph. Commits, pull requests and code reviews in private repositories.</div>
             </div>
           </div>
         </div>
