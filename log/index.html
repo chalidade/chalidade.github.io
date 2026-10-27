@@ -209,7 +209,9 @@
     const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
       ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-    // File list: GitHub API (60 req/h per visitor, so cached per tab), jsDelivr as fallback.
+    // File list: index.json that a devlog Action writes to the `index` branch on every push
+    // (raw has no rate limit); GitHub API (60 req/h per visitor, so cached per tab) as fallback.
+    // jsDelivr's branch listing is not used: it froze on a weeks-old snapshot.
     async function listFiles() {
       try {
         const c = JSON.parse(sessionStorage.getItem(CACHE_KEY) || "null");
@@ -217,13 +219,13 @@
       } catch {}
       let files;
       try {
-        const r = await fetch(`https://api.github.com/repos/${REPO}/git/trees/${BRANCH}?recursive=1`);
+        const r = await fetch(`https://raw.githubusercontent.com/${REPO}/index/index.json`);
         if (!r.ok) throw new Error(r.status);
-        files = (await r.json()).tree.filter((t) => t.type === "blob").map((t) => t.path);
+        files = (await r.json()).files;
       } catch {
-        const r = await fetch(`https://data.jsdelivr.com/v1/packages/gh/${REPO}@${BRANCH}?structure=flat`);
+        const r = await fetch(`https://api.github.com/repos/${REPO}/git/trees/${BRANCH}?recursive=1`);
         if (!r.ok) throw new Error("both sources failed");
-        files = (await r.json()).files.map((f) => f.name.replace(/^\//, ""));
+        files = (await r.json()).tree.filter((t) => t.type === "blob").map((t) => t.path);
       }
       try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), files })); } catch {}
       return files;
