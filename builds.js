@@ -26,6 +26,16 @@ window.BUILDS = [
     icon: "K",
   },
   {
+    name: "Saling Jaga",
+    description:
+      "Walkie-talkie, chat and SOS between Android phones with no internet or signal, over Wi-Fi Direct. A custom binary protocol over TCP, tested with three hubs on real sockets, in a ~200 KB APK with no third-party libraries. MVP: field testing in progress.",
+    repo: "https://github.com/chalidade/saling-jaga",
+    url: "https://chalidade.github.io/saling-jaga/",
+    tags: ["Android", "Java", "Wi-Fi Direct", "TCP", "GitHub Actions"],
+    status: "wip",
+    icon: "S",
+  },
+  {
     name: "tools",
     description:
       "My everyday file toolbox, free for everyone: 38 tools for PDF, Office, image, video, audio and QR files that run entirely in the browser, so files never leave the device.",
