@@ -102,14 +102,6 @@
     .btn.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
     .btn svg { width: 16px; height: 16px; }
 
-    /* hero chibi: static transparent image */
-    .hero-row { display: grid; grid-template-columns: minmax(0, 1fr) 216px; gap: 24px; align-items: end; }
-    .chibi {
-      position: relative; z-index: 1; width: 216px; aspect-ratio: 3 / 5;
-      margin: -40px 0 -86px; /* feet sit 94% down the frame: stand them on .stats */
-    }
-    .chibi img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-
     .stats {
       display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 64px;
       border: 1px solid var(--border); border-radius: 16px; background: var(--card); overflow: hidden;
@@ -304,8 +296,6 @@
       .nav-links a { display: none; }
       .hero { padding-top: 64px; padding-bottom: 48px; }
       .stats { grid-template-columns: 1fr 1fr; }
-      .hero-row { grid-template-columns: 1fr; }
-      .chibi { width: 168px; justify-self: center; margin: 16px 0 -81px; }
       .stat:nth-child(3) { border-left: 0; }
       .stat:nth-child(n+3) { border-top: 1px solid var(--border); }
       section { padding: 56px 0; }
@@ -358,8 +348,6 @@
         <div class="status"><i></i> Remote · East Java, Indonesia (GMT+7)</div>
       </div>
       <h1>Chalid Ade Rahman.<br><span class="grad">Senior Frontend Engineer.</span></h1>
-      <div class="hero-row">
-      <div>
       <p class="lead">
         <b>8+ years</b> building production web apps for global teams across <b>EdTech</b>,
         <b>logistics</b> and <b>fintech</b>. I architect and ship React / Next.js applications
@@ -380,11 +368,6 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
           GitHub
         </a>
-      </div>
-      </div>
-      <div class="chibi">
-        <img src="chibi/poster.webp" width="480" height="800" alt="">
-      </div>
       </div>
       <div class="stats">
         <div class="stat"><b>8+ yrs</b><span>shipping production web apps</span></div>
