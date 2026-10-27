@@ -14,8 +14,8 @@ HTML statis tanpa build step — isinya diambil dari CV (v3).
   atas), `notes/**/*.md` jadi kartu catatan. Cukup push file `.md` baru ke devlog —
   repo ini tidak perlu diubah.
 
-- `chibi/` — chibi animasi di hero (hover melambai, klik perkenalan). Sumber, timeline
-  dan cara membuat ulangnya ada di `_motion/README.md`.
+- `chibi/poster.webp` — gambar chibi statis di hero. Sumber animasi lama (sudah tidak dipakai)
+  ada di `_motion/`.
 
 Edit, commit, push — GitHub Pages memperbaruinya dalam ±1 menit.
 Situs-situs weeknoo tetap di https://chalidade.github.io/weeknoo/ (repo terpisah).

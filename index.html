@@ -102,25 +102,13 @@
     .btn.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
     .btn svg { width: 16px; height: 16px; }
 
-    /* hero chibi: oil-motion chroma video keyed on a canvas (_motion/README.md) */
+    /* hero chibi: static transparent image */
     .hero-row { display: grid; grid-template-columns: minmax(0, 1fr) 216px; gap: 24px; align-items: end; }
     .chibi {
       position: relative; z-index: 1; width: 216px; aspect-ratio: 3 / 5;
       margin: -40px 0 -86px; /* feet sit 94% down the frame: stand them on .stats */
-      cursor: pointer; border-radius: 16px;
-      -webkit-tap-highlight-color: transparent;
     }
-    .chibi:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-    .chibi img, .chibi canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-    .chibi canvas { opacity: 0; }
-    .chibi.is-live canvas { opacity: 1; }
-    .chibi.is-live img { opacity: 0; }
-    .chibi .hint {
-      position: absolute; top: 12%; left: 74%; white-space: nowrap; font-size: 12px; color: var(--muted);
-      background: var(--card); border: 1px solid var(--border); border-radius: 999px 999px 999px 4px; padding: 3px 10px;
-      opacity: 0; transform: translateY(4px); transition: opacity .2s, transform .2s; pointer-events: none;
-    }
-    .chibi:hover .hint, .chibi:focus-visible .hint { opacity: 1; transform: none; }
+    .chibi img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 
     .stats {
       display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 64px;
@@ -318,7 +306,6 @@
       .stats { grid-template-columns: 1fr 1fr; }
       .hero-row { grid-template-columns: 1fr; }
       .chibi { width: 168px; justify-self: center; margin: 16px 0 -81px; }
-      .chibi .hint { display: none; }
       .stat:nth-child(3) { border-left: 0; }
       .stat:nth-child(n+3) { border-top: 1px solid var(--border); }
       section { padding: 56px 0; }
@@ -395,11 +382,8 @@
         </a>
       </div>
       </div>
-      <div class="chibi" data-chibi="chibi/" role="button" tabindex="0"
-           aria-label="Chibi Chalid — hover to wave, click for a hello">
+      <div class="chibi">
         <img src="chibi/poster.webp" width="480" height="800" alt="">
-        <canvas aria-hidden="true"></canvas>
-        <span class="hint mono">click me</span>
       </div>
       </div>
       <div class="stats">
@@ -699,7 +683,6 @@
   </footer>
 
   <script src="builds.js"></script>
-  <script src="chibi/chibi.js" defer></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
