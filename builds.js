@@ -17,6 +17,25 @@
 
 window.BUILDS = [
   {
+    name: "jobfair.co.id",
+    description:
+      "A virtual job fair you walk through as a character: browse company stands, chat with recruiters, join career seminars and apply online from anywhere. Payments run on an append-only coin ledger, and movement is sent as intent so a crowd fits a free realtime tier.",
+    repo: "https://github.com/chalidade/vwo",
+    url: "https://jobfair.co.id",
+    tags: ["Next.js", "TypeScript", "Postgres", "Supabase Realtime", "Xendit"],
+    status: "live",
+    icon: "J",
+  },
+  {
+    name: "Kuliah Indo",
+    description:
+      "A learning platform for Indonesian university students, live for two years: paid seminars and trainings taught by industry mentors, with free modules and certificates after each class. 600+ registered students so far.",
+    url: "https://kuliahindo.com",
+    tags: ["Laravel", "PHP", "MySQL"],
+    status: "live",
+    icon: "K",
+  },
+  {
     name: "Kita Berkembang",
     description:
       "A store builder for Indonesian small businesses: each store gets its own subdomain and orders land in WhatsApp. Prices, stock and vouchers are recomputed on the server, and CI runs 104 PHPUnit and 32 Playwright tests before every deploy.",
@@ -28,11 +47,11 @@ window.BUILDS = [
   {
     name: "Saling Jaga",
     description:
-      "Walkie-talkie, chat and SOS between Android phones with no internet or signal, over Wi-Fi Direct. A custom binary protocol over TCP, tested with three hubs on real sockets, in a ~200 KB APK with no third-party libraries. MVP: field testing in progress.",
+      "Walkie-talkie, chat and SOS between Android phones with no internet or signal, over Wi-Fi Direct. A custom binary protocol over TCP, tested with three hubs on real sockets, in a ~200 KB APK with no third-party libraries.",
     repo: "https://github.com/chalidade/saling-jaga",
     url: "https://chalidade.github.io/saling-jaga/",
     tags: ["Android", "Java", "Wi-Fi Direct", "TCP", "GitHub Actions"],
-    status: "wip",
+    status: "live",
     icon: "S",
   },
   {
