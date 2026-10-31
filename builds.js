@@ -47,19 +47,19 @@ window.BUILDS = [
   {
     name: "Saling Jaga",
     description:
-      "Walkie-talkie, chat and SOS between Android phones with no internet or signal, over Wi-Fi Direct. A custom binary protocol over TCP, tested with three hubs on real sockets, in a ~200 KB APK with no third-party libraries.",
+      "Calls, walkie-talkie, chat and SOS between Android phones with no internet or signal, over Wi-Fi Direct, plus a LoRa gateway for longer range. Every link is encrypted (ECDH P-256, AES-256-GCM), and tests check that no name or message crosses the wire in the clear. Field-tested, ~350 KB APK, no third-party libraries.",
     url: "https://saling-jaga.my.id/",
-    tags: ["Android", "Java", "Wi-Fi Direct", "TCP", "GitHub Actions"],
+    tags: ["Android", "Java", "Wi-Fi Direct", "Encryption", "LoRa"],
     status: "live",
     icon: "S",
   },
   {
-    name: "tools",
+    name: "toowl",
     description:
-      "My everyday file toolbox, free for everyone: 38 tools for PDF, Office, image, video, audio and QR files that run entirely in the browser, so files never leave the device.",
+      "toowl, my everyday toolbox, free for everyone: 70+ tools for PDF, Office, image, video, audio, QR and everyday sums that run entirely in the browser, so files never leave the device. Each tool also ships as an npm package: a web component plus a headless API.",
     repo: "https://github.com/chalidade/tools",
     url: "https://chalidade.github.io/tools/",
-    tags: ["React", "TypeScript", "pdf.js", "qpdf-wasm", "WebCodecs"],
+    tags: ["React", "TypeScript", "WebAssembly", "WebCodecs", "npm"],
     status: "live",
     icon: "T",
   },
