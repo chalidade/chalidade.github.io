@@ -55,7 +55,7 @@ window.BUILDS = [
   {
     name: "toowl",
     description:
-      "toowl, my everyday toolbox, free for everyone: 70+ tools for PDF, Office, image, video, audio, QR and everyday sums that run entirely in the browser, so files never leave the device. Each tool also ships as an npm package: a web component plus a headless API.",
+      "toowl, my everyday toolbox, free for everyone: 70+ tools for PDF, Office, image, video, audio, QR and everyday sums that run entirely in the browser, so files never leave the device. Tools are also published on npm under @chalidade, each as a web component plus a headless API.",
     repo: "https://github.com/chalidade/tools",
     url: "https://chalidade.github.io/tools/",
     tags: ["React", "TypeScript", "WebAssembly", "WebCodecs", "npm"],
