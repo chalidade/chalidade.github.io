@@ -20,7 +20,6 @@ window.BUILDS = [
     name: "jobfair.co.id",
     description:
       "A virtual job fair you walk through as a character: browse company stands, chat with recruiters, join career seminars and apply online from anywhere. Payments run on an append-only coin ledger, and movement is sent as intent so a crowd fits a free realtime tier.",
-    repo: "https://github.com/chalidade/vwo",
     url: "https://jobfair.co.id",
     tags: ["Next.js", "TypeScript", "Postgres", "Supabase Realtime", "Xendit"],
     status: "live",
