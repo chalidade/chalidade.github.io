@@ -119,11 +119,13 @@
     .video { flex: 1; min-height: 0; display: grid; place-items: center; container-type: size; }
     .video .frame { position: relative; width: min(100cqw, 100cqh * 16 / 9); aspect-ratio: 16 / 9; }
     /* feather the film's edges into the stage so its frame never shows as a box */
+    /* the film is drawn on pure white, so multiply makes its canvas take the stage's own colour;
+       the feathered mask softens the darker night scene's edges */
     .video video {
-      display: block; width: 100%; height: 100%;
-      -webkit-mask: linear-gradient(90deg, #0000, #000 48px calc(100% - 48px), #0000), linear-gradient(#0000, #000 48px calc(100% - 12px), #0000);
+      display: block; width: 100%; height: 100%; mix-blend-mode: multiply;
+      -webkit-mask: linear-gradient(90deg, #0000, #000 72px calc(100% - 72px), #0000), linear-gradient(#0000, #000 56px calc(100% - 40px), #0000);
       -webkit-mask-composite: source-in;
-      mask: linear-gradient(90deg, #0000, #000 48px calc(100% - 48px), #0000), linear-gradient(#0000, #000 48px calc(100% - 12px), #0000);
+      mask: linear-gradient(90deg, #0000, #000 72px calc(100% - 72px), #0000), linear-gradient(#0000, #000 56px calc(100% - 40px), #0000);
       mask-composite: intersect;
     }
     .video .play {
