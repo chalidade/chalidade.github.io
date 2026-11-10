@@ -46,7 +46,7 @@ window.BUILDS = [
   {
     name: "Saling Jaga",
     description:
-      "Calls, walkie-talkie, chat and SOS between Android phones with no internet or signal, over Wi-Fi Direct, plus a LoRa gateway for longer range. Every link is encrypted (ECDH P-256, AES-256-GCM), and tests check that no name or message crosses the wire in the clear. Field-tested, ~350 KB APK, no third-party libraries.",
+      "Calls, walkie-talkie, chat and SOS between Android phones with no internet or signal, over Wi-Fi Direct, plus a LoRa gateway for longer range. Every link is encrypted (ECDH P-256, AES-256-GCM), and tests check that no name or message crosses the wire in the clear. Field-tested, ~550 KB APK, no third-party libraries. 4,000+ APK downloads in one week after a post about it reached 300,000+ views on Threads.",
     url: "https://saling-jaga.my.id/",
     tags: ["Android", "Java", "Wi-Fi Direct", "Encryption", "LoRa"],
     status: "live",
