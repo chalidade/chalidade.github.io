@@ -19,9 +19,9 @@ window.BUILDS = [
   {
     name: "Saling Jaga",
     description:
-      "Calls, walkie-talkie, chat and SOS between Android phones with no internet or signal, over Wi-Fi Direct, plus a LoRa gateway for longer range. Every link is encrypted (ECDH P-256, AES-256-GCM), and tests check that no name or message crosses the wire in the clear. Field-tested, ~550 KB APK, no third-party libraries. 4,000+ APK downloads in one week after a post about it reached 300,000+ views on Threads.",
-    url: "https://saling-jaga.my.id/",
-    tags: ["Android", "Java", "Wi-Fi Direct", "Encryption", "LoRa"],
+      "Calls, walkie-talkie, chat, an offline map, roll call and SOS between phones with no internet or signal, over Wi-Fi Direct and Bluetooth; iPhones and laptops join through the browser of an Android host. Every link is encrypted (ECDH P-256, AES-256-GCM), the APK is ~760 KB with no third-party libraries, and it is in closed testing on Google Play. 4,000+ APK downloads in its first week; six Threads posts about it passed 590,000 views.",
+    url: "https://saling-jaga.com/",
+    tags: ["Android", "Java", "Wi-Fi Direct", "Bluetooth", "Encryption"],
     status: "live",
     icon: "S",
   },
@@ -55,9 +55,9 @@ window.BUILDS = [
   {
     name: "toowl",
     description:
-      "toowl, my everyday toolbox, free for everyone: 70+ tools for PDF, Office, image, video, audio, QR and everyday sums that run entirely in the browser, so files never leave the device. Tools are also published on npm under @chalidade, each as a web component plus a headless API.",
+      "toowl, my everyday toolbox, free for everyone: 110+ tools for PDF, Office, image, video, audio, music, QR, developer work, everyday sums and emergencies. Everything runs in the browser, so files never leave the device; it installs as an app, speaks Indonesian and English, and tools are also published on npm under @chalidade.",
     repo: "https://github.com/chalidade/tools",
-    url: "https://chalidade.github.io/tools/",
+    url: "https://toowl.my.id/",
     tags: ["React", "TypeScript", "WebAssembly", "WebCodecs", "npm"],
     status: "live",
     icon: "T",
